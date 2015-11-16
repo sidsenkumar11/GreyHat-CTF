@@ -1,0 +1,22 @@
+(1) Wolfram Alpha is a nice tool for factoring numbers like this.
+
+
+(2) You can use this inverse mod function to help you if you don't want to code it for yourself.
+
+
+def egcd(a, b): #inverse mod function (its not built in)
+    if a == 0:
+        return (b, 0, 1)
+    else:
+        g, y, x = egcd(b % a, a)
+        return (g, x - (b // a) * y, y)
+
+def modinv(a, m): #inverse mod function
+    g, x, y = egcd(a, m)
+    if g != 1:
+        return -1
+    else:
+        return x % m
+
+
+(3) The message is about RSA - look for "rsa" in the plaintext

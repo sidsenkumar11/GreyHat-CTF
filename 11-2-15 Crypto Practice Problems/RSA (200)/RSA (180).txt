@@ -1,0 +1,5 @@
+You stumble upon an RSA encrypted message that looks different. All you know is the public key. Can you decrypt the message? Hint: The message is about RSA.
+
+public n = 0x219cc6aa0ec13d041c4971
+message = 0xac470f7350ea67d7a0696
+
