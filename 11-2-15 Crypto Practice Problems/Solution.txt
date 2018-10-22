@@ -1,0 +1,36 @@
+Solutions:
+
+Brute force hash
+--------------------
+	Answer:
+		kxjeernlntybuhbl
+	Code:
+		text = "dqcxxkgegmrunaue"
+		flag= ""
+		for a in range(len(text)):
+		    for b in [chr(i) for i in range(97,97+26)]:
+		        if hash1(b)[0] == text[a]:
+		            flag += b
+		            break
+		print flag
+
+Obfuscation
+-------------
+	Answer:
+		0bfuscaTion fTw
+	Steps:
+		jsbeautifier.org/
+		Copy paste beautified code into console of browser
+		run it
+		Look for highlighted variable name, click it. 
+		view the variable name.
+
+RSA
+-----------
+	Answer:
+		rsa_2_easy
+	Steps:
+		1) Factor the public key to get P & Q
+		2) We don't have a public exponent e, so we'll have to bruteforce it.
+			We do know that the flag has "rsa" in it, so just bruteforce all e's until we get text that has that
+		3) d = modInv(e, totient(n))
